@@ -28,6 +28,10 @@ After that, include the service provider within `config/app.php`.
 ];
 ```
 
+<<<<<<< HEAD
+=======
+You can't figure it out? You need more help? Here is a video tutorial for you : [Laravel Installer by Devdojo](https://www.youtube.com/watch?v=Jput5doFYLg)
+>>>>>>> b419ed86a7ccf61322de10b92a387807c10adb4f
 
 ## Usage
 
