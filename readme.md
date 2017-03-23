@@ -1,4 +1,8 @@
 # Laravel Web Installer
+
+[![Packagist License](https://poser.pugx.org/froiden/laravel-installer/license.png)]()
+[![Total Downloads](https://poser.pugx.org/froiden/laravel-installer/d/total.png)](https://packagist.org/packages/froiden/laravel-rest-api)
+
 Do you want your clients to be able to install a Laravel project just like they do with WordPress or any other CMS?
 This Laravel package allows users who don't use Composer, SSH etc to install your application just by following the setup wizard.
 The current features are : 
@@ -9,29 +13,17 @@ The current features are :
 	- Migrate The Database.
 	- Seed The Tables.
 
-If you have any suggestions please let me know : https://github.com/RachidLaasri/LaravelInstaller/pulls.
 
 ## Installation
+`composer require "froiden/laravel-installer:dev-master"`
 
-First, pull in the package through Composer.
 
-```
-"require": {
-    "rachidlaasri/laravel-installer": "1.5"
-}
-```
-
-And then run :
-
-```
-composer update
-```
 
 After that, include the service provider within `config/app.php`.
 
 ```
 'providers' => [
-    RachidLaasri\LaravelInstaller\Providers\LaravelInstallerServiceProvider::class,
+    Froiden\LaravelInstaller\Providers\LaravelInstallerServiceProvider::class,
 ];
 ```
 
@@ -41,7 +33,7 @@ You can't figure it out? You need more help? Here is a video tutorial for you : 
 
 Before using this package you need to run :
 ```bash
-php artisan vendor:publish --provider="RachidLaasri\LaravelInstaller\Providers\LaravelInstallerServiceProvider"
+php artisan vendor:publish --provider="Froiden\LaravelInstaller\Providers\LaravelInstallerServiceProvider"
 ```
 
 You will notice additional files and folders appear in your project :
@@ -55,6 +47,5 @@ You will notice additional files and folders appear in your project :
  
 ![Laravel web installer](http://i.imgur.com/3vYBPLn.png)
 
-## TODO
-- [ ] Create Wiki.
-- [ ] Support more languages.
+## Credits
+[RachidLaasri Installer](https://github.com/RachidLaasri/LaravelInstaller)
