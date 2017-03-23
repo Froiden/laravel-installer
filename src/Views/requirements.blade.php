@@ -14,5 +14,5 @@
                 {{ trans('installer_messages.next') }}
             </a>
         </div>
-    @endifz
+    @endif
 @stop
