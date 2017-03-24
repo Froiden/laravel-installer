@@ -44,7 +44,7 @@ You will notice additional files and folders appear in your project :
 
 ## Screenshots
  
-![Laravel web installer](http://i.imgur.com/3vYBPLn.png)
+![Laravel web installer](http://froid.works/codecanyon/knap.jpg)
 
 ## Credits
 [RachidLaasri Installer](https://github.com/RachidLaasri/LaravelInstaller)
