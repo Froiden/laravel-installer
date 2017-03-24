@@ -18,20 +18,6 @@
     </style>
 @endsection
 @section('container')
-    @if (count($errors) > 0)
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
-
-    @if (session('message'))
-        <p class="alert alert-danger">{{ session('message') }}</p>
-    @endif
-
     <form method="post" action="{{ route('LaravelInstaller::environmentSave') }}" id="env-form">
         <div class="form-group">
             <label class="col-sm-2 control-label">Hostname</label>

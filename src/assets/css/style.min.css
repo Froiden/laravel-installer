@@ -2147,7 +2147,9 @@ a:hover {
     font-size: 16px;
     background-color: #f5f5f5;
     border-radius: 2px;
-    padding: 0 10px;
+    padding: 10px;
+    background: #009688;
+    color: #ffffff;
 }
 .btn-danger{
     background-color: red;
