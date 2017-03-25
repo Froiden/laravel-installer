@@ -2,8 +2,6 @@
     include 'functions.php';
 Route::group(['prefix' => 'install', 'as' => 'LaravelInstaller::', 'namespace' => 'Froiden\LaravelInstaller\Controllers', 'middleware' => 'web','install'], function()
 {
-    $key = 'base64:'.base64_encode(random_bytes(32));
-//    Config::set('app.key', $key);
 
     Route::get('/', [
             'as' => 'welcome',
