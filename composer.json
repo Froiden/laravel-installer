@@ -2,6 +2,8 @@
   "name": "froiden/laravel-installer",
   "description": "Laravel web installer",
   "license": "MIT",
+  "type": "library",
+
   "authors": [
     {
       "name": "Ajay Kumar Choudhary",
@@ -17,5 +19,5 @@
       "src/functions.php"
     ]
   },
-  "minimum-stability": "stable"
+  "minimum-stability": "dev"
 }
