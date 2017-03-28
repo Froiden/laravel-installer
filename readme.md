@@ -16,7 +16,7 @@ The current features are :
 
 ## Installation
 Run in terminal
-`composer require "froiden/laravel-installer:dev-master"`
+`composer require froiden/laravel-installer`
 
 
 
