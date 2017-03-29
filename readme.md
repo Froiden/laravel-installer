@@ -3,24 +3,25 @@
 [![Packagist License](https://poser.pugx.org/froiden/laravel-installer/license.png)]()
 [![Total Downloads](https://poser.pugx.org/froiden/laravel-installer/d/total.png)](https://packagist.org/packages/froiden/laravel-installer)
 
-Do you want your clients to be able to install a Laravel project just like they do with WordPress or any other CMS?
-This Laravel package allows users who don't use Composer, SSH etc to install your application just by following the setup wizard.
-The current features are : 
+Laravel Web installer checks for the following things and install the application in one go.
 
-	- Check For Server Requirements.
-	- Check For Folders Permissions.
-	- Ability to set database information.
-	- Migrate The Database.
-	- Seed The Tables.
+ - 1.Check For Server Requirements.
+ - 2.Check For Folders Permissions.
+ - 3.Ability to set database information.
+ - 4.Migrate The Database.
+ - 5.Seed The Tables.
 
+## Note:
+You need to have `.env` to the root
 
 ## Installation
-Run in terminal
-`composer require froiden/laravel-installer`
+Require this package with composer:
+```
+composer require froiden/laravel-installer
+```
 
 
-
-After that, include the service provider within `config/app.php`.
+After updating composer, add the ServiceProvider to the providers array in `config/app.php`.
 
 ```
 'providers' => [
