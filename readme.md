@@ -43,6 +43,9 @@ You will notice additional files and folders appear in your project :
  - `resources/views/vendor/installer` : Contains the HTML code for your installer.
  - `resources/lang/en/installer_messages.php` : This file holds all the messages/text.
 
+## Installing and updating your application
+- **Install:** In order to install your application, go to the `/install` url and follow the instructions.
+- **Update:** In order to update your application, go to the `/update` url and follow the instructions.
 ## Screenshots
  
 ![Laravel web installer](http://froid.works/codecanyon/knap.jpg)
