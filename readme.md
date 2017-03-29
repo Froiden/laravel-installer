@@ -38,7 +38,7 @@ php artisan vendor:publish --provider="Froiden\LaravelInstaller\Providers\Larave
 
 You will notice additional files and folders appear in your project :
  
- - `config/installer.php` : Set the requirements along with the folders permissions for your application to run, by default the array cotaines the default requirements for a basic Laravel app.
+ - `config/installer.php` : Set the requirements along with the folders permissions for your application to run, by default the array contains the default requirements for a basic Laravel app.
  - `public/installer/assets` : This folder contains a css folder and inside it you will find a `main.css` file, this file is responsible for the styling of your installer, you can overide the default styling and add your own.
  - `resources/views/vendor/installer` : Contains the HTML code for your installer.
  - `resources/lang/en/installer_messages.php` : This file holds all the messages/text.
