@@ -140,7 +140,7 @@
 
                             showResponseMessage(message, "success", {
                                 timeOut: 100000,
-                                positionClass: "toast-top-center"
+                                positionClass: "toast-top-right"
                             });
                             window.location.href = response.url;
                         }

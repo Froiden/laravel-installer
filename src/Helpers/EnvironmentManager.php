@@ -66,15 +66,14 @@ class EnvironmentManager
 DB_DATABASE=' . $dbName . '
 DB_USERNAME=' . $dbUsername . '
 DB_PASSWORD=' . $dbPassword . '
-APP_DEBUG=false
-APP_ENV=production
 ';
-        // @ignoreCodingStandard
-        $rows = explode("\n",$env);
-        $unwanted = "DB_HOST|DB_DATABASE|DB_USERNAME|DB_PASSWORD|APP_DEBUG|APP_ENV";
-        $cleanArray = preg_grep("/$unwanted/i",$rows,PREG_GREP_INVERT);
 
-        $cleanString = implode("\n",$cleanArray);
+        // @ignoreCodingStandard
+        $rows       = explode("\n", $env);
+        $unwanted   = "DB_HOST|DB_DATABASE|DB_USERNAME|DB_PASSWORD";
+        $cleanArray = preg_grep("/$unwanted/i", $rows, PREG_GREP_INVERT);
+
+        $cleanString = implode("\n", $cleanArray);
 
 
         $env = $cleanString.$databaseSetting;
