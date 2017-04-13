@@ -68,4 +68,5 @@ return [
         'finished' => 'Application has been successfully installed.',
         'exit' => 'Click here to exit',
     ],
+    'checkPermissionAgain' => ' Check Permission Again'
 ];
