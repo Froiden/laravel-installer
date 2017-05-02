@@ -35,7 +35,7 @@ class EnvironmentController extends Controller
     {
         $envConfig = $this->environmentManager->getEnvContent();
 
-        return view('vendor.installer.environment');
+        return view('vendor.installer.environment', compact('envConfig'));
     }
 
     /**
