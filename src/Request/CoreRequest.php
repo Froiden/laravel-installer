@@ -2,8 +2,9 @@
 
     namespace Froiden\LaravelInstaller\Request;
 
+use Froiden\LaravelInstaller\Helpers\Reply;
 use Illuminate\Foundation\Http\FormRequest;
-use App\Classes\Reply;
+
 
 class CoreRequest extends FormRequest
 {
