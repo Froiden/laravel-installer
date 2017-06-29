@@ -2,7 +2,9 @@
 
 namespace Froiden\LaravelInstaller\Providers;
 
+use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
+use Froiden\LaravelInstaller\Middleware\canInstall;
 
 class LaravelInstallerServiceProvider extends ServiceProvider
 {
@@ -28,11 +30,12 @@ class LaravelInstallerServiceProvider extends ServiceProvider
     /**
      * Bootstrap the application events.
      *
+     * @param \Illuminate\Routing\Router $router
      * @return void
      */
-    public function boot()
+    public function boot(Router $router)
     {
-        app('router')->middleware('canInstall', '\Froiden\LaravelInstaller\Middleware\canInstall');
+        $router->middlewareGroup('install', [canInstall::class]);
     }
 
     /**
