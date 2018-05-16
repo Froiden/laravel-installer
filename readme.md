@@ -47,7 +47,7 @@ You will notice additional files and folders appear in your project :
 - **Install:** In order to install your application, go to the `/install` url and follow the instructions.
 ## Screenshots
  
-![Laravel web installer](http://froid.works/codecanyon/knap.jpg)
+![Laravel web installer](http://public.froid.works/knap1.png)
 
 ## Credits
 [RachidLaasri Installer](https://github.com/RachidLaasri/LaravelInstaller)
