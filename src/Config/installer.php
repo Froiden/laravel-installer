@@ -12,11 +12,17 @@ return [
     | by looping through the array and run "extension_loaded" on it.
     |
     */
+    'core' => [
+        'minPhpVersion' => '7.1.0'
+    ],
+
     'requirements' => [
         'openssl',
         'pdo',
         'mbstring',
-        'tokenizer'
+        'tokenizer',
+        'fileinfo',
+        'curl'
     ],
 
     /*
