@@ -10,7 +10,7 @@
         @endforeach
     </ul>
 
-    @if ( ! isset($requirements['errors']))
+    @if ( ! isset($requirements['errors']) && $phpSupportInfo['supported'] == 'success')
         <div class="buttons">
             <a class="button" href="{{ route('LaravelInstaller::permissions') }}">
                 {{ trans('installer_messages.next') }}
