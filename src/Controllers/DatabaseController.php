@@ -28,6 +28,10 @@ class DatabaseController extends Controller
      */
     public function database()
     {
+        // Sometimes migration file and seed files may take more then 30 seconds so we are going to set it 0 that indicates
+        // that there is no time limit for execution.
+
+        set_time_limit(0);
         $response = $this->databaseManager->migrateAndSeed();
 
         return redirect()->route('LaravelInstaller::final')
