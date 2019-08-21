@@ -65,7 +65,7 @@ class EnvironmentManager
         $databaseSetting = 'DB_HOST=' . $dbHost . '
 DB_DATABASE=' . $dbName . '
 DB_USERNAME=' . $dbUsername . '
-DB_PASSWORD=' . $dbPassword . '
+DB_PASSWORD="' . $dbPassword . '"
 ';
 
         // @ignoreCodingStandard
