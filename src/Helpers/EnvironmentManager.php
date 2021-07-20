@@ -66,11 +66,12 @@ class EnvironmentManager
 DB_DATABASE=' . $dbName . '
 DB_USERNAME=' . $dbUsername . '
 DB_PASSWORD="' . $dbPassword . '"
+APP_URL="' . request()->getSchemeAndHttpHost() . '"
 ';
 
         // @ignoreCodingStandard
         $rows       = explode("\n", $env);
-        $unwanted   = "DB_HOST|DB_DATABASE|DB_USERNAME|DB_PASSWORD";
+        $unwanted   = "DB_HOST|DB_DATABASE|DB_USERNAME|DB_PASSWORD|APP_URL";
         $cleanArray = preg_grep("/$unwanted/i", $rows, PREG_GREP_INVERT);
 
         $cleanString = implode("\n", $cleanArray);
