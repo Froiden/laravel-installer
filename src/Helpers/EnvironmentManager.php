@@ -84,7 +84,7 @@ APP_URL="' . request()->getSchemeAndHttpHost() . '"
             $dbh->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
 
             // First check if database exists
-            $stmt = $dbh->query('CREATE DATABASE IF NOT EXISTS '.$dbName.' CHARACTER SET utf8 COLLATE utf8_general_ci;');
+            $stmt = $dbh->query('CREATE DATABASE IF NOT EXISTS `'.$dbName.'` CHARACTER SET utf8 COLLATE utf8_general_ci;');
             // Save settings in session
             $_SESSION['db_username'] = $dbUsername;
             $_SESSION['db_password'] = $dbPassword;
