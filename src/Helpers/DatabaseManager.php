@@ -31,7 +31,7 @@ class DatabaseManager
     private function migrate()
     {
         try {
-            Artisan::call('migrate', ["--force" => true, '--schema-path' => 'do not run schema path']);
+            Artisan::call('migrate:fresh', ["--force" => true, '--schema-path' => 'do not run schema path']);
         } catch (Exception $e) {
             return $this->response($e->getMessage());
         }
