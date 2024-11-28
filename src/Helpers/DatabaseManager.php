@@ -7,11 +7,9 @@ use Illuminate\Database\SQLiteConnection;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Log;
 
 class DatabaseManager
 {
-
     /**
      * Migrate and seed the database.
      *
@@ -20,6 +18,7 @@ class DatabaseManager
     public function migrateAndSeed()
     {
         $this->sqlite();
+
         return $this->migrate();
     }
 
@@ -31,7 +30,7 @@ class DatabaseManager
     private function migrate()
     {
         try {
-            Artisan::call('migrate:fresh', ["--force" => true, '--schema-path' => 'do not run schema path']);
+            Artisan::call('migrate:fresh', ['--force' => true, '--schema-path' => 'do not run schema path']);
         } catch (Exception $e) {
             return $this->response($e->getMessage());
         }
@@ -52,22 +51,32 @@ class DatabaseManager
             return $this->response($e->getMessage());
         }
 
-        return $this->response(trans('installer_messages.final.finished'), 'success');
+        // Prepare a success message using translations
+        $response_message = trans('installer_messages.final.finished');
+
+        // Set the success message in the session for later use in the view
+        session([
+            'installer' => [
+                'message' => $response_message,
+                'status' => 'success',
+            ],
+        ]);
+
+        return $this->response($response_message, 'success');
     }
 
     /**
      * Return a formatted error messages.
      *
-     * @param $message
-     * @param string $status
+     * @param  string  $status
      * @return array
      */
     private function response($message, $status = 'danger')
     {
-        return array(
+        return [
             'status' => $status,
-            'message' => $message
-        );
+            'message' => $message,
+        ];
     }
 
     /**
@@ -77,7 +86,7 @@ class DatabaseManager
     {
         if (DB::connection() instanceof SQLiteConnection) {
             $database = DB::connection()->getDatabaseName();
-            if (!file_exists($database)) {
+            if (! file_exists($database)) {
                 touch($database);
                 DB::reconnect(Config::get('database.default'));
             }
